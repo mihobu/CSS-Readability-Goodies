@@ -1,0 +1,56 @@
+@import url(https://fonts.googleapis.com/css?family=Passion+One);
+
+h1 {
+  font-family: 'Passion One';
+  font-size: 36px;
+  font-weight: normal !important;
+  color: #005AAA;
+}
+
+h2 {
+  font-family: 'Passion One';
+  font-size: 30px;
+  font-weight: normal !important;
+  line-height: 40px;
+  color: #005AAA;
+  text-align: center;
+  margin: 30px 0;
+  border-width: 10px 0;
+  border-style: solid;
+  border-color: #5AAAAA;
+  padding: 30px 0;
+  background-color: #DDDDFF;
+}
+
+hr {
+  border: 0;
+  background-color: #ffffff;
+  border-top: 1px solid black;
+}
+
+hr.major {
+  border-top: 10px solid #5AAA5A;
+}
+
+hr.minor {
+  border: none; background-color: #ffffff;
+  border-top: 5px dotted #CC3333;
+}
+
+div.bubble {
+  width: 65%;
+  padding: 20px;
+  background: #DDDDDD;
+  border-radius: 15px;
+  margin: 0 auto;
+  font-style: italic;
+  color: #f00;
+}
+
+em {
+  color: #393;
+}
+
+div.note{
+  color:red;
+}
