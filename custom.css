@@ -1,3 +1,8 @@
+/* Copy this file to ~/.jupyter/custom/custom.css
+ * and all your dreams will come true.
+ * Copyright (c) 2017 Michael Burkhardt github.com/mihobu
+ */
+
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
 
 /* SET FONT FOR ALL TEXT CELLS */
