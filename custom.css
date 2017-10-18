@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+/* SET FONT FOR ALL TEXT CELLS */
+div.cell.text_cell { font-family: 'PT Sans'; }
+
+/* SET DEFAULTS FOR RENDERED MARKDOWN TEXT */
+.rendered_html * { color: #232333; }
+
+/* H1 IS GENERALLY FOR THE PAGE TITLE ONLY */
+.rendered_html h1 {
+  font-size: 45px;
+  color: #0044CC !important;
+}
+
+/* I THINK OF H2 AS "MAJOR" SECTION BREAK,
+ * SO I WANT THOSE TO REALLY STAND OUT */
+.rendered_html h2 {
+  font-size: 30px;
+  line-height: 40px;
+  color: #0044CC !important;
+  text-align: center;
+  margin: 30px 0;
+  border-width: 10px 0;
+  border-style: solid;
+  border-color: #CC4400 #000000 #AAAAAA #000000;
+  padding: 30px 0;
+  background-color: #DDDDDD;
+}
+
+/* HORIZONTAL RULES ARE EASILY LOST, SO LET'S MAKE THOSE POP */
+.rendered_html hr {
+  color: #FFFFFF;
+  background-color: #FFFFFF;
+  border-top: 10px dotted #CCCCCC;
+  width: 50%;
+  height: 0;
+}
+
+/* CODE BLOCKS GET SPECIAL TREATMENT, BOTH INLINE AND IN BLOCKS */
+.rendered_html code {
+  background-color: #eeddcc;
+  color: #006622;
+  font-weight: bold;
+  padding: 2px;
+}
+
+
+/* BUBBLES ARE SPECIAL CALLOUTS THAT CAN CONTAIN BLOCKS OF TEXT
+ * THAT NEED TO BE HIGHLIGHTED
+ * USAGE: <div class="bubble">...</div>
+ * */
+div.bubble {
+  width: 65%;
+  padding: 20px;
+  background: #8899DD;
+  border-radius: 25px;
+  margin: 25px auto;
+  font-style: italic;
+  color: #FFFFFF;
+}
