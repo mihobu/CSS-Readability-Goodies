@@ -1,38 +1,56 @@
-/* Copy this file to ~/.jupyter/custom/custom.css
- * and all your dreams will come true.
- * Copyright (c) 2017 Michael Burkhardt github.com/mihobu
- */
 
+/***************************************************
+ * Text
+ ***************************************************/
+
+/* Import my preferred Google font */
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
 
-/* SET FONT FOR ALL TEXT CELLS */
-div.cell.text_cell { font-family: 'PT Sans'; }
-
-/* SET DEFAULTS FOR RENDERED MARKDOWN TEXT */
-.rendered_html * { color: #232333; }
-
-/* H1 IS GENERALLY FOR THE PAGE TITLE ONLY */
-.rendered_html h1 {
-  font-size: 45px;
-  color: #0044CC !important;
+/* Set default text properties for all rendered HTML */
+.rendered_html * {
+    font-family: "PT Sans";
+    color: #232333;
+    font-size: 16px;
 }
 
-/* I THINK OF H2 AS "MAJOR" SECTION BREAK,
- * SO I WANT THOSE TO REALLY STAND OUT */
+/***************************************************
+ * Headings
+ ***************************************************/
+
+/* H1: Large blue type for top-level headings */
+.rendered_html h1 {
+    font-size: 36px;
+    color: #0044CC !important;
+    margin: 0;
+}
+
+/* H2: I use this for major sections. It is obnoxiously bold to
+   make it easier to spot in long notebooks. */
 .rendered_html h2 {
   font-size: 30px;
   line-height: 40px;
-  color: #0044CC !important;
+  color: #232333;
   text-align: center;
   margin: 30px 0;
   border-width: 10px 0;
   border-style: solid;
-  border-color: #CC4400 #000000 #AAAAAA #000000;
+  border-color: #BB0000 #000000 #666666 #000000;
   padding: 30px 0;
   background-color: #DDDDDD;
 }
 
-/* HORIZONTAL RULES ARE EASILY LOST, SO LET'S MAKE THOSE POP */
+.rendered_html h3 {
+    font-size: 24px;
+    color: #0044CC;
+}
+
+/***************************************************
+ * Horizontal Rule
+ ***************************************************/
+
+/* By default, horizontal rules are not very easy to spot,
+   given that notebook cells are also characterized by thin
+   horizontal lines. */
 .rendered_html hr {
   color: #FFFFFF;
   background-color: #FFFFFF;
@@ -41,7 +59,12 @@ div.cell.text_cell { font-family: 'PT Sans'; }
   height: 0;
 }
 
-/* CODE BLOCKS GET SPECIAL TREATMENT, BOTH INLINE AND IN BLOCKS */
+/***************************************************
+ * Code blocks
+ ***************************************************/
+
+/* This style is applicable to inline code enclosed within
+   single, double, or triple backticks. */
 .rendered_html code {
   background-color: #eeddcc;
   color: #006622;
@@ -49,17 +72,31 @@ div.cell.text_cell { font-family: 'PT Sans'; }
   padding: 2px;
 }
 
+/***************************************************
+ * Table cells
+ ***************************************************/
+.rendered_html td {
+  font-size: 12px;
+}
+.rendered_html th {
+  font-size: 12px;
+}
 
-/* BUBBLES ARE SPECIAL CALLOUTS THAT CAN CONTAIN BLOCKS OF TEXT
- * THAT NEED TO BE HIGHLIGHTED
- * USAGE: <div class="bubble">...</div>
- * */
-div.bubble {
-  width: 65%;
-  padding: 20px;
-  background: #8899DD;
-  border-radius: 25px;
-  margin: 25px auto;
-  font-style: italic;
-  color: #FFFFFF;
+/*DL, DT, DD TAGS LIST DATA*/
+dl {
+  border: 1px solid red;
+  padding: 10px;
+  background-color: #FFCCCC;
+}
+ 
+dl dt {
+  color: #000000;
+  font-weight: bold; 
+}
+ 
+dl dd {
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: inside;
+  margin: 0 0 0 0; 
 }
